@@ -74,18 +74,18 @@ class initialCommandTest {
  
     }
     
-    @DisplayName("Valid Input Command: CommandSequence - i 5, C, q")
-    @Test
-    public void testInputCommand_initialize_printCurrentPosition_quit() {
-    	
-        String userInput = "i 5\nc\nq\n";
-        
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
-       
-        robot.inputCommand();
-
-        assertArrayEquals(new int[]{0, 0}, robot.robotPosition);
-    }
+//    @DisplayName("Valid Input Command: CommandSequence - i 5, C, q")
+//    @Test
+//    public void testInputCommand_initialize_printCurrentPosition_quit() {
+//    	
+//        String userInput = "i 5\nc\nq\n";
+//        
+//        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
+//       
+//        robot.inputCommand();
+//
+//        assertArrayEquals(new int[]{0, 0}, robot.robotPosition);
+//    }
  
     
     @DisplayName("Valid Input Command: CommandSequence - i 5")

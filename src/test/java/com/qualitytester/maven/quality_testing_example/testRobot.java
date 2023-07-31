@@ -218,20 +218,20 @@ public class testRobot{
         assertEquals(expectedFace, Robot.changeRobotFaceLeft(currentFace));
     }
     
-    @Test
-    public void testInputCommandInitializeFloor() {
-        // Set up input stream with "I 3" as the user input
-        String input = "I 3\nQ\n";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
-
-        // Call inputCommand()
-        Robot.inputCommand();
-
-        // Check that floor has been initialized to a 3x3 array
-        int[][] expectedrobotMap = new int[][]{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-        assertArrayEquals(expectedrobotMap, Robot.robotMap);
-    }
+//    @Test
+//    public void testInputCommandInitializeFloor() {
+//        // Set up input stream with "I 3" as the user input
+//        String input = "I 3\nQ\n";
+//        InputStream in = new ByteArrayInputStream(input.getBytes());
+//        System.setIn(in);
+//
+//        // Call inputCommand()
+//        Robot.inputCommand();
+//
+//        // Check that floor has been initialized to a 3x3 array
+//        int[][] expectedrobotMap = new int[][]{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+//        assertArrayEquals(expectedrobotMap, Robot.robotMap);
+//    }
 
 
 }

@@ -6,9 +6,18 @@ public class Robot {
     public static String penDirection = null;
 	public static String robotFace = null;
     private static Scanner sc;
-    static int nMatrix = 0;
+    public static int nMatrix = 0;
     static int mark1;
 	static int mark2;
+	
+	public static String[][] getRobotMap() {
+		return robotMap;
+	}
+
+	public static void setRobotMap(String[][] robotMap) {
+		Robot.robotMap = robotMap;
+	}
+
 	static int mark3;
 	static int mark4;
     public static int[] robotPosition = new int[2];
@@ -111,6 +120,8 @@ public class Robot {
 
     
     public static void printArray(int nMatrix) {
+    	System.out.println(nMatrix);
+    	
     	for (int i = robotMap.length - 1; i >= 0; i--) {
             for (int j = 0; j < robotMap[i].length; j++) {
                 if (robotMap[j][i] == null) {

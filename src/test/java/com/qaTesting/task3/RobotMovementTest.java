@@ -3,6 +3,8 @@ package com.qaTesting.task3;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -35,7 +37,7 @@ class RobotMovementTest {
 
 	        int[] expectedPosition = { 4, 2 };
 	        assertArrayEquals(expectedPosition, newPosition);
-	      
+	       
 	    }
 	    
 	    @DisplayName("Robot moving forward - facing east, pen down")
@@ -114,6 +116,30 @@ class RobotMovementTest {
 	      
 	    }
 	    
+	    @DisplayName("Robot moving forward - no space")
+	    @Test
+	    public void testMove_penUp_outOfBoundary_conditionalMutation() {
+	        // Initialize the robotMap with some values
+	    	String[] direction = {"east","north"};
+	        int nMatrix = 0;
+	        robot.initialiseArray(nMatrix);
+
+	        // Set the robot position at (2, 1)
+	        int[] robotPosition = { 0, 0};
+	        robot.robotPosition = robotPosition;
+	        
+	        Throwable exception = Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,()->{
+	            for(int i=0;i<4;i++) {
+	    	        String[] commandArray = { "m", "0" };
+	    	        int[] newPosition = robot.move(robot.robotPosition, commandArray, nMatrix, direction[i], "up", robot.robotMap);
+	    	    
+	    	        }
+	    	});
+	        
+	   
+	   
+	    }
 
 
 }
+
