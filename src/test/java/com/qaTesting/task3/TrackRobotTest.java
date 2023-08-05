@@ -52,7 +52,7 @@ class TrackRobotTest {
 
 	        assertTrue(updatedMap[1][1].equals("*") && updatedMap[2][2].equals("*") && updatedMap[3][3].equals("*"));
 	    }
-	 
+//	 
 	 @Test
 	    public void testTrackRobotWithNoTurn() {
 	     
@@ -65,7 +65,9 @@ class TrackRobotTest {
 	        int newY = 1;
 	        String[][] updatedMap = robot.trackRobot(oldX, oldY, newX, newY, "down", robot.robotMap);
 
-	        assertTrue(updatedMap[3][3].equals("*") && updatedMap[2][2].equals("*") && updatedMap[1][1].equals("*"));
+	        assertTrue(updatedMap[3][3].equals("*"));
+	        assertTrue(updatedMap[2][2].equals("*"));
+	        assertTrue(updatedMap[1][1].equals("*"));
 	    }
 	 
 		

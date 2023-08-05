@@ -97,12 +97,12 @@ class RobotMovementTest {
 	    @DisplayName("Robot moving forward - no space")
 	    @Test
 	    public void testMove_penUp_outOfBoundary() {
-	        // Initialize the robotMap with some values
+	     
 	    	String[] direction = {"west","east","south","north"};
 	        int nMatrix = 1;
 	        robot.initialiseArray(nMatrix);
 
-	        // Set the robot position at (2, 1)
+	      
 	        int[] robotPosition = { 1, 1 };
 	        robot.robotPosition = robotPosition;
 	        

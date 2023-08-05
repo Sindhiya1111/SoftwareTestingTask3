@@ -80,9 +80,7 @@ public class Robot {
     public static int[] move(int[] robotPosition, String []commandArray, int nMatrix, String robotFace, String penDirection, String[][] robotMap) {
         int mark1 = robotPosition[1];
         int mark2 = robotPosition[0];
-        int walk = Integer.parseInt(commandArray[1]);
-        
-        
+        int walk = Integer.parseInt(commandArray[1]);      
         if (robotFace.equals("north")) {
             if (robotPosition[0] + walk <= nMatrix) {
                 robotPosition[0] = robotPosition[0] + walk;
@@ -108,13 +106,9 @@ public class Robot {
                 System.out.println("Space not available for robot to move sidewards");
             }
         }
-
         int mark3 = robotPosition[1];
         int mark4 = robotPosition[0];
-
-        // Assuming trackRobot method modifies robotMap based on the robot's movement
         robotMap = trackRobot(mark1, mark2, mark3, mark4, penDirection, robotMap);
-
         return robotPosition;
     }
 
