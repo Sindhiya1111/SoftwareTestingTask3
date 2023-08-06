@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.qualitytester.maven.quality_testing_example.Robot;
@@ -20,9 +21,9 @@ class MultiConditionTest {
 	}
 
 //	if (oldX > newX || oldY > newY) 
-	
+	@DisplayName("TrackRobot multiple condition 1")
 	@Test
-	void testMulipleCondition_FT() {
+	void testMulipleCondition_TrackRobot() {
 		
 		robot.initialiseArray(4);
         robot.robotMap[1][1] = "*";
@@ -43,7 +44,7 @@ class MultiConditionTest {
 	}
 	
 	 @Test
-	    public void testTrackRobotWithNoTurn() {
+	    public void testTrackRobotWithNoTurn_branch1() {
 	     
 	        robot.initialiseArray(4);
 	        robot.robotMap[1][1] = "*";
@@ -60,7 +61,7 @@ class MultiConditionTest {
 	    }
 	 
 	 @Test
-	    public void testTrackRobotWithNoTurn1() {
+	    public void testTrackRobotWithNoTurn_branch2() {
 	     
 	        robot.initialiseArray(4);
 	        robot.robotMap[1][1] = "*";
@@ -78,7 +79,7 @@ class MultiConditionTest {
 	    }
 	 
 	 @Test
-	    public void testTrackRobotWithNoTurn2() {
+	    public void testTrackRobotWithNoTurn2_branch3() {
 	     
 	        robot.initialiseArray(2);
 	        robot.robotMap[1][1] = "*";

@@ -9,10 +9,7 @@ public class Robot {
     public static int nMatrix = 0;
     static int mark1;
 	static int mark2;
-	
-	public static String[][] getRobotMap() {
-		return robotMap;
-	}
+
 
 	public static void setRobotMap(String[][] robotMap) {
 		Robot.robotMap = robotMap;
